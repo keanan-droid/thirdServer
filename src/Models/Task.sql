@@ -1,0 +1,7 @@
+CREATE TABLE Task(
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  owner INTEGER REFERENCES Account(id) NOT NULL,
+  dueDate DATE NOT NULL,
+  isDone Boolean FALSE
+);
